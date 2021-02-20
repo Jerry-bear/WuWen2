@@ -1,0 +1,45 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/login_btn_shape0" android:duration="550" />
+    <item android:drawable="@drawable/login_btn_shape1" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape2" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape3" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape4" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape5" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape6" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape7" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape8" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape9" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape10" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape11" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape12" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape13" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape14" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape15" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape16" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape17" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape18" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape19" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape20" android:duration="550" />
+    <item android:drawable="@drawable/login_btn_shape21" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape22" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape23" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape24" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape25" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape26" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape27" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape28" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape29" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape30" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape31" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape32" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape33" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape34" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape35" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape36" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape37" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape38" android:duration="150" />
+    <item android:drawable="@drawable/login_btn_shape39" android:duration="150" />
+
+
+</animation-list>

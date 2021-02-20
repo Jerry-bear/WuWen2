@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WuWen</string>
+    <string name="login_username">请输入密码</string>
 </resources>
