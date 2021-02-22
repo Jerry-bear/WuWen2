@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainface_bg_pic"
+    tools:context=".ui.maininterface.MaininterfaceActivity">
+
+    <ScrollView
+        android:id="@+id/mainface_srv_srv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="265dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView2"
+                    android:layout_width="320dp"
+
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="7dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView7"
+                    android:layout_width="320dp"
+
+                    android:layout_height="220dp"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="7dp"
+                    app:layout_constraintEnd_toEndOf="@+id/materialCardView6"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/materialCardView5"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView5">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="着装"
+                            android:textColor="#000000"
+                            android:textSize="12dp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView8"
+                            app:layout_constraintStart_toStartOf="@+id/imageView8"
+                            app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="出行"
+                            android:textColor="#000000"
+                            android:textSize="12dp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                            app:layout_constraintStart_toStartOf="@+id/imageView7"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AI"
+                            android:textColor="#000000"
+                            android:textSize="12dp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                            app:layout_constraintStart_toStartOf="@+id/imageView5"
+                            app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="游戏"
+                            android:textColor="#000000"
+                            android:textSize="12dp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                            app:layout_constraintStart_toStartOf="@+id/imageView6"
+                            app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="视力"
+                            android:textColor="#000000"
+                            android:textSize="12dp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                            app:layout_constraintStart_toStartOf="@+id/imageView4"
+                            app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.357"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/imageView3"
+                            app:srcCompat="@drawable/glasses_log" />
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.65"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/imageView4"
+                            app:srcCompat="@drawable/mouse_log" />
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginBottom="52dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/imageView3"
+                            app:srcCompat="@drawable/mao2_log" />
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                            app:srcCompat="@drawable/tap_log" />
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.95"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/imageView6"
+                            app:srcCompat="@drawable/pingban_log" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="28dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.058"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/clock_log" />
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="时钟"
+                            android:textColor="#000000"
+                            android:textSize="12dp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                            app:layout_constraintStart_toStartOf="@+id/imageView3"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mainface_gusture_cardview"
+                    android:layout_width="150dp"
+
+                    android:layout_height="180dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#DEEAFF"
+                    app:cardCornerRadius="7dp"
+                    app:layout_constraintStart_toStartOf="@+id/materialCardView2"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView9"
+                            android:layout_width="69dp"
+                            android:layout_height="67dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.506"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/shibie2" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="106dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center"
+                            android:text="手语识别"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                            app:layout_constraintHorizontal_bias="0.513"
+                            app:layout_constraintStart_toStartOf="@+id/imageView9"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="136dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="通过手语比划实时获取手语语义"
+                            android:textSize="12dp"
+                            app:layout_constraintEnd_toEndOf="@+id/textView6"
+                            app:layout_constraintStart_toStartOf="@+id/textView6"
+                            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView4"
+                    android:layout_width="150dp"
+
+                    android:layout_height="180dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#FDE2D9"
+                    app:cardCornerRadius="7dp"
+                    app:layout_constraintEnd_toEndOf="@+id/materialCardView2"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="137dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="纵观世界，走出自我"
+                            android:textSize="12dp"
+                            app:layout_constraintEnd_toEndOf="@+id/textView11"
+                            app:layout_constraintStart_toStartOf="@+id/textView11"
+                            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                        <TextView
+
+                            android:id="@+id/textView11"
+                            android:layout_width="106dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center"
+                            android:text="新闻"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView10"
+                            app:layout_constraintHorizontal_bias="0.512"
+                            app:layout_constraintStart_toStartOf="@+id/imageView10"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+                        <ImageView
+                            android:id="@+id/imageView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.506"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/news2" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView5"
+                    android:layout_width="150dp"
+
+                    android:layout_height="78dp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#C4F2FF"
+                    app:cardCornerRadius="7dp"
+                    app:layout_constraintStart_toStartOf="@+id/mainface_gusture_cardview"
+                    app:layout_constraintTop_toBottomOf="@+id/mainface_gusture_cardview">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView11"
+                            android:layout_width="51dp"
+                            android:layout_height="59dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/learn_log" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="手语教学"
+                            android:textColor="#000000"
+                            android:textSize="22dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView11"
+                            app:layout_constraintTop_toTopOf="@+id/imageView11"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="89dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="教你如何使用手语沟通"
+                            android:textSize="12dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView11"
+                            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView6"
+                    android:layout_width="150dp"
+
+                    android:layout_height="78dp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#CDFFEE"
+                    app:cardCornerRadius="7dp"
+                    app:layout_constraintEnd_toEndOf="@+id/materialCardView4"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView4">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView12"
+                            android:layout_width="37dp"
+                            android:layout_height="59dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/video_log" />
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="小视频"
+                            android:textColor="#000000"
+                            android:textSize="22dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView12"
+                            app:layout_constraintTop_toTopOf="@+id/imageView12"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="89dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="来看看精彩的视频吧"
+                            android:textSize="12dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView12"
+                            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    app:layout_constraintEnd_toEndOf="@+id/materialCardView7"
+                    app:layout_constraintStart_toStartOf="@+id/materialCardView7"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView7" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/mainface_me_mig"
+                android:layout_width="58dp"
+                android:layout_height="32dp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.823"
+                app:srcCompat="@drawable/man_log" />
+
+            <ImageView
+                android:id="@+id/mainface_vie_img"
+                android:layout_width="70dp"
+                android:layout_height="39dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/hy0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
