@@ -4,6 +4,156 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.gesture.GestureActivity">
+    tools:context=".ui.gesture.GestureActivity"
+    >
+
+
+    <LinearLayout
+        android:background="@drawable/shibie_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/gesture_bgu_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/shibiebeijing1" />
+
+            <EditText
+
+                android:maxLines="7"
+                android:id="@+id/gesture_board_edt"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gesture_board_shape"
+                android:gravity="center"
+                android:hint="识别的内容"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textCursorDrawable="@drawable/my_cursor"
+                android:textSize="20dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gesture_bgu_img" />
+
+            <ImageView
+
+                android:id="@+id/gesture_bgd_img"
+                android:layout_width="match_parent"
+                android:layout_height="425dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gesture_board_edt"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/shibiebeijing2" />
+
+            <ImageView
+                android:id="@+id/gesture_box_img"
+                android:layout_width="201dp"
+                android:layout_height="212dp"
+                app:layout_constraintBottom_toBottomOf="@+id/gesture_bgu_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/gesture_bgu_img"
+                app:layout_constraintVertical_bias="0.765"
+                app:srcCompat="@drawable/jiao" />
+
+            <ImageView
+                android:id="@+id/gesture_hand_img"
+                android:layout_width="140dp"
+                android:layout_height="141dp"
+                app:layout_constraintBottom_toBottomOf="@+id/gesture_box_img"
+                app:layout_constraintEnd_toEndOf="@+id/gesture_box_img"
+                app:layout_constraintStart_toStartOf="@+id/gesture_box_img"
+                app:layout_constraintTop_toTopOf="@+id/gesture_box_img"
+                app:srcCompat="@drawable/hand_log" />
+
+            <ImageView
+                android:id="@+id/gesture_action_img"
+                android:layout_width="81dp"
+                android:layout_height="81dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gesture_board_edt"
+                app:srcCompat="@drawable/zhiwen_log" />
+
+            <ImageView
+                android:id="@+id/gesture_action_img2"
+                android:layout_width="81dp"
+                android:layout_height="81dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gesture_board_edt"
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+            <TextView
+                android:id="@+id/gesture_action_text"
+                android:layout_width="131dp"
+                android:layout_height="41dp"
+                android:gravity="center"
+                android:text="开始识别"
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                app:layout_constraintEnd_toEndOf="@+id/gesture_action_img"
+                app:layout_constraintStart_toStartOf="@+id/gesture_action_img"
+                app:layout_constraintTop_toBottomOf="@+id/gesture_action_img" />
+
+            <TextView
+                android:id="@+id/gesture_action_text2"
+                android:layout_width="131dp"
+                android:layout_height="41dp"
+                android:gravity="center"
+                android:text="点击结束"
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/gesture_action_img2"
+                app:layout_constraintStart_toStartOf="@+id/gesture_action_img2"
+                app:layout_constraintTop_toBottomOf="@+id/gesture_action_img2" />
+
+            <ImageView
+
+                android:id="@+id/gesture_reading_img"
+                android:layout_width="340dp"
+                android:layout_height="157dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/gesture_bgu_img"
+                app:layout_constraintEnd_toEndOf="@+id/gesture_bgu_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.76"
+                app:srcCompat="@drawable/reading00" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="36dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="52dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/abc_vector_test" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
