@@ -43,7 +43,6 @@
                 android:background="@drawable/register_log_bg"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.085"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.497"
@@ -53,12 +52,13 @@
                 android:id="@+id/register_logtext1_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Welcome to"
+                android:text="Welcome to WuWen"
                 android:textColor="#ffffff"
                 android:textScaleX="1.13"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/register_log_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/register_log_img"
                 app:layout_constraintVertical_bias="0.23" />
 
@@ -66,7 +66,6 @@
                 android:id="@+id/register_logtext2_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="WuWen"
                 android:textColor="#ffffff"
                 app:layout_constraintStart_toStartOf="@+id/register_logtext1_text"
                 app:layout_constraintTop_toBottomOf="@+id/register_logtext1_text" />
@@ -141,7 +140,7 @@
                         android:layout_height="1dp"
                         android:layout_marginBottom="4dp"
                         android:layout_weight="12"
-                        android:background="#FFAB30" />
+                        android:background="#9CE0FF" />
 
                     <View
                         android:id="@+id/viewnew"
@@ -233,7 +232,7 @@
                         android:layout_height="1dp"
                         android:layout_marginBottom="4dp"
                         android:layout_weight="12"
-                        android:background="#FFAB30" />
+                        android:background="#9CE0FF" />
 
                     <View
                         android:id="@+id/viewnew7"
@@ -328,7 +327,7 @@
                         android:layout_height="1dp"
                         android:layout_marginBottom="4dp"
                         android:layout_weight="12"
-                        android:background="#FFAB30" />
+                        android:background="#9CE0FF" />
 
                     <View
                         android:id="@+id/viewnew10"
@@ -384,7 +383,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="获取验证码"
-                    android:textColor="#FFAB30"
+                    android:textColor="#9CE0FF"
                     android:textSize="18dp"
                     app:layout_constraintBottom_toBottomOf="@+id/register_code_edt"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -398,6 +397,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/register_camera_shape"
+                android:padding="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.921"
                 app:layout_constraintStart_toStartOf="parent"
