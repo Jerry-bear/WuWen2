@@ -12,6 +12,7 @@ class WuWen2Application :Application() {
         lateinit var EMAIL:String//邮箱
         lateinit var NAME:String//用户名
         lateinit var TELE:String//电话
+        var ifactionmovie=true
     }
 
     override fun onCreate() {

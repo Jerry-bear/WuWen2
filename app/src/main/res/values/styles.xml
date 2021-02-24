@@ -11,4 +11,8 @@
         <item name="android:indeterminateDrawable">@drawable/progressbar</item>
         <item name="android:indeterminateDuration">50</item>
     </style>
+    <style name="ProgressBar2" parent="android:style/Widget.Holo.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/progressbar2</item>
+        <item name="android:indeterminateDuration">200</item>
+    </style>
 </resources>

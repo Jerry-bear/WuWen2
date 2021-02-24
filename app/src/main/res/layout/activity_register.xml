@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bg3_picture"
+    tools:context=".ui.register.RegisterActivity">
+
+    <ProgressBar
+        android:id="@+id/register_load_pgb"
+        style="@style/ProgressBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationZ="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/register_log_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/register_log_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.085"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.497"
+                app:srcCompat="@drawable/log" />
+
+            <TextView
+                android:id="@+id/register_logtext1_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to"
+                android:textColor="#ffffff"
+                android:textScaleX="1.13"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/register_log_img"
+                app:layout_constraintTop_toBottomOf="@+id/register_log_img"
+                app:layout_constraintVertical_bias="0.23" />
+
+            <TextView
+                android:id="@+id/register_logtext2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WuWen"
+                android:textColor="#ffffff"
+                app:layout_constraintStart_toStartOf="@+id/register_logtext1_text"
+                app:layout_constraintTop_toBottomOf="@+id/register_logtext1_text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/register_bgd_lo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:background="@drawable/register_face_shape">
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在注册账号"
+                android:textColor="#000000"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.063" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="右侧上可直接上传头像"
+                android:textSize="13dp"
+                app:layout_constraintStart_toStartOf="@+id/textView20"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+            <com.jerry.wuwen.resource.LineTextView
+
+                android:id="@+id/register_iptusn_grp"
+                style="?android:attr/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@null"
+                android:textColor="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView21"
+                app:layout_constraintVertical_bias="0.035">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:background="#00000000" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="12"
+                        android:background="#FFAB30" />
+
+                    <View
+                        android:id="@+id/viewnew"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:background="#00000000" />
+                </LinearLayout>
+
+                <com.jerry.wuwen.resource.LineEditText
+                    android:id="@+id/register_usn_edt"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="246dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@null"
+                    android:hint="您注册的手机号"
+                    android:maxLines="1"
+                    android:textColor="@null"
+                    android:textCursorDrawable="@drawable/my_cursor"
+                    app:layout_constraintStart_toEndOf="@+id/imageView16"
+                    app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="38dp"
+                    android:layout_height="43dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.083"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/register_log" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入手机号"
+                    android:textColor="#8A8A8A"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.091"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.64" />
+            </com.jerry.wuwen.resource.LineTextView>
+
+            <com.jerry.wuwen.resource.LineTextView
+
+
+                android:id="@+id/lineTextView3"
+                style="?android:attr/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="4dp"
+                android:background="@null"
+                android:textColor="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_iptusn_grp"
+                app:layout_constraintVertical_bias="0.056">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:background="#00000000" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="12"
+                        android:background="#FFAB30" />
+
+                    <View
+                        android:id="@+id/viewnew7"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:background="#00000000" />
+                </LinearLayout>
+
+                <com.jerry.wuwen.resource.LineEditText
+                    android:id="@+id/register_psw_edt"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="246dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@null"
+                    android:hint="输入您的密码"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@null"
+                    android:textCursorDrawable="@drawable/my_cursor"
+                    app:layout_constraintStart_toEndOf="@+id/imageView17"
+                    app:layout_constraintTop_toTopOf="@+id/imageView17" />
+
+                <ImageView
+
+                    android:id="@+id/imageView17"
+                    android:layout_width="38dp"
+                    android:layout_height="43dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.083"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/password_log2" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请输入密码"
+                    android:textColor="#8A8A8A"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView17"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.088"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.615" />
+            </com.jerry.wuwen.resource.LineTextView>
+
+            <com.jerry.wuwen.resource.LineTextView
+
+                android:id="@+id/lineTextView4"
+                style="?android:attr/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:textColor="@null"
+                android:translationZ="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineTextView3"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <View
+                        android:id="@+id/view8"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:background="#00000000" />
+
+                    <View
+                        android:id="@+id/view9"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="12"
+                        android:background="#FFAB30" />
+
+                    <View
+                        android:id="@+id/viewnew10"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:background="#00000000" />
+                </LinearLayout>
+
+                <com.jerry.wuwen.resource.LineEditText
+                    android:id="@+id/register_code_edt"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="200dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@null"
+                    android:hint="请输入验证码"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@null"
+                    android:textCursorDrawable="@drawable/my_cursor"
+                    app:layout_constraintStart_toEndOf="@+id/imageView18"
+                    app:layout_constraintTop_toTopOf="@+id/imageView18" />
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="38dp"
+                    android:layout_height="43dp"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.08"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/code_log" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="验证码"
+                    android:textColor="#8A8A8A"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView18"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.08"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.615" />
+
+                <TextView
+                    android:id="@+id/register_code_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="获取验证码"
+                    android:textColor="#FFAB30"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/register_code_edt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.906"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </com.jerry.wuwen.resource.LineTextView>
+
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/register_camera_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.921"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView20"
+                app:srcCompat="@android:drawable/ic_menu_camera" />
+
+            <Button
+                android:id="@+id/register_register_btn"
+                android:layout_width="174dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/regiest_btn_shape"
+                android:text="注册"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineTextView4"
+                app:layout_constraintVertical_bias="0.555" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0729927" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

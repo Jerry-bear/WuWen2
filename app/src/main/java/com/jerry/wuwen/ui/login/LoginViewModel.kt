@@ -12,6 +12,7 @@ import retrofit2.Response
 class LoginViewModel:ViewModel() {
     val requestBodyLiveData= MutableLiveData<LoginRequest>()
 
+
     val responseBodyLiveData=Transformations.switchMap(requestBodyLiveData){requestBodyLiveData->
         Repository.askLogin(requestBodyLiveData)
 

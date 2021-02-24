@@ -27,6 +27,7 @@ import com.jerry.wuwen.logic.Repository
 import com.jerry.wuwen.logic.model.LoginRequest
 import com.jerry.wuwen.logic.model.LoginResponse
 import com.jerry.wuwen.ui.maininterface.MaininterfaceActivity
+import com.jerry.wuwen.ui.register.RegisterActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.login_later.*
 
@@ -34,7 +35,7 @@ import kotlinx.android.synthetic.main.login_later.*
 private lateinit var rocketAnimation: AnimationDrawable//开场动画的rocketAnimation
 private lateinit var rocketAnimation_button: AnimationDrawable//登录按钮的rocketAnimation
 class MainActivity : AppCompatActivity() {
-
+    val viewModel by lazy { ViewModelProvider(this).get(LoginViewModel::class.java) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //使状态栏和背景融合
@@ -43,7 +44,14 @@ class MainActivity : AppCompatActivity() {
         window.statusBarColor= Color.TRANSPARENT//最后调用一下statusBarColor()方法将状态栏设置为透明色
         setContentView(R.layout.activity_main)
 
-        val viewModel by lazy { ViewModelProvider(this).get(LoginViewModel::class.java) }
+        //接收从注册界面传来的数据
+        val extrausername=intent.getStringExtra("username")
+        val extrapassword=intent.getStringExtra("password")
+        login_iptusn_edt.setText(extrausername)
+        login_iptpsw_edt.setText(extrapassword)
+
+
+
 
         //开场准备阶段的动画
         //设置开场的界面动画
@@ -57,21 +65,34 @@ class MainActivity : AppCompatActivity() {
             rocketAnimation_button = background as AnimationDrawable
         }
         //使下方定义的更新主线程(开场准备阶段的动画)开始进行
-        Animationstop(
-            rocketImage,
-            login_later,
-            login_materialCardview,
-            login_login_btn
-        ).execute()
+
+            Animationstop(
+                rocketImage,
+                login_later,
+                login_materialCardview,
+                login_login_btn
+            ).execute()
 
 
-        //设置点击等事件
+
+        //注册账号
+        login_register_text.setOnClickListener {
+            val intent=Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+
+        //设置登录点击等事件
         //设置改变用户名输入框的内容后password框文字清空
         login_iptusn_edt.addTextChangedListener{editable->
                 login_iptpsw_edt.setText(null)
         }
         //点击登录按钮
         login_login_btn.setOnClickListener {
+            login_iptusn_edt.isEnabled=false
+            login_iptpsw_edt.isEnabled=false
+            login_login_btn.isEnabled=false
 
             val username_content=login_iptusn_edt.text.toString()
             val password_content=login_iptpsw_edt.text.toString()
@@ -81,7 +102,6 @@ class MainActivity : AppCompatActivity() {
                 login_load_pgb.visibility=View.VISIBLE
             }else{
                 Toast.makeText(this,"未输入用户名或密码",Toast.LENGTH_SHORT).show()
-
             }
         }
         //用于监听responseBodyLiveData的变化
@@ -105,15 +125,20 @@ class MainActivity : AppCompatActivity() {
             }else{
                 Toast.makeText(this,"无网络连接",Toast.LENGTH_SHORT).show()
             }
-
             Log.d("结束","加载圈圈消失")
             login_load_pgb.visibility=View.GONE
+            login_iptusn_edt.isEnabled=true
+            login_iptpsw_edt.isEnabled=true
+            login_login_btn.isEnabled=true
         })
     }
 
     override fun onStart() {
         super.onStart()
-        rocketAnimation.start()
+        if (WuWen2Application.ifactionmovie==true){
+            WuWen2Application.ifactionmovie=false
+            rocketAnimation.start()
+        }
         rocketAnimation_button.start()
     }
     private fun showExitDialog01(message:String) {
@@ -143,7 +168,10 @@ class Animationstop(val imageView: ImageView,val loginlater:View,val login_mater
     }
 
     override fun doInBackground(vararg params: Unit?) {
-        SystemClock.sleep(5000);
+        if (WuWen2Application.ifactionmovie==true){
+            SystemClock.sleep(5000);
+        }
+
 
     }
 

@@ -22,12 +22,24 @@ import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
 import com.youth.banner.listener.OnBannerListener
 import com.youth.banner.loader.ImageLoader
+import kotlinx.android.synthetic.main.activity_gesture.*
 import kotlinx.android.synthetic.main.activity_maininterface.*
 import kotlinx.coroutines.NonCancellable.start
 import kotlin.concurrent.thread
 
 
 class MaininterfaceActivity : AppCompatActivity(),OnBannerListener {
+    //获取viewmodel实例
+    val viewModel by lazy { ViewModelProvider(this).get(MaininterfaceViewModel::class.java) }
+    override fun onPause() {
+        super.onPause()
+        viewModel.ifvipmove=false
+    }
+
+    override fun onStart() {
+        super.onStart()
+        viewModel.ifvipmove=true
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,8 +52,7 @@ class MaininterfaceActivity : AppCompatActivity(),OnBannerListener {
 
 
 
-        //获取viewmodel实例
-        val viewModel by lazy { ViewModelProvider(this).get(MaininterfaceViewModel::class.java) }
+
 
 
 
@@ -64,9 +75,8 @@ class MaininterfaceActivity : AppCompatActivity(),OnBannerListener {
             }
         animator.setDuration(3000);
         thread{
-            while (true){
+            while (viewModel.ifvipmove==true){
                 Log.d("循环","有一次循环")
-
                 val msg=Message()
                 msg.what=1
                 handler.sendMessage((msg))
@@ -79,8 +89,12 @@ class MaininterfaceActivity : AppCompatActivity(),OnBannerListener {
         mainface_gusture_cardview.setOnClickListener {
             val intent=Intent(this,GestureActivity::class.java)
             startActivity(intent)
+            finish()
         }
+
     }
+
+
 
 
 
@@ -143,41 +157,3 @@ class MaininterfaceActivity : AppCompatActivity(),OnBannerListener {
 
 
 /****************************************************下方为其他类******************************************************************************/
-//定义一个在子线程中更新vip动画的AsyncTask()的类
-class Animationstop(val imageView: ImageView?,var number:Int):
-    AsyncTask<Unit, Unit, Unit>(){
-
-    override fun onProgressUpdate(vararg values: Unit?) {
-
-    }
-
-    override fun onPostExecute(result: Unit?) {
-        Log.d("onpostexecute",number.toString())
-
-        if (number==1){
-            val animator = ObjectAnimator.ofFloat(imageView, "rotation", 0f, 30f,0f,-30f,0f,10f,0f,-10f,0f)
-            animator.setDuration(3000);
-            animator.start();
-        }
-    }
-
-    override fun doInBackground(vararg params: Unit?) {
-        while (true) {
-            number=0
-            SystemClock.sleep(5000);
-            number=1
-        }
-    }
-
-    override fun onPreExecute() {
-        //实现vip图标摇一摇功能
-        val animator = ObjectAnimator.ofFloat(imageView, "rotation", 0f, 30f,0f,-30f,0f,10f,0f,-10f,0f)
-        animator.setDuration(3000);
-        animator.start();
-    }
-}
-fun viprun(imageView: ImageView?){
-    val animator = ObjectAnimator.ofFloat(imageView, "rotation", 0f, 30f,0f,-30f,0f,10f,0f,-10f,0f)
-    animator.setDuration(3000);
-    animator.start();
-}

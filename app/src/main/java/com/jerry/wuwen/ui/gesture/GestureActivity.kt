@@ -31,7 +31,9 @@ class GestureActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-
+        viewModel.ifbox_run.value=false
+        val intent=Intent(this,MaininterfaceActivity::class.java)
+        startActivity(intent)
         finish()
     }
 
@@ -46,7 +48,10 @@ class GestureActivity : AppCompatActivity() {
         viewModel.ifbox_run.value=true
 
 
-
+        //设置返回事件
+        mainface_back_btn.setOnClickListener {
+            onBackPressed()
+        }
 
         //实现box图标摇一摇功能
         //开启一个线程计算,发送消息刀主线程更新ui

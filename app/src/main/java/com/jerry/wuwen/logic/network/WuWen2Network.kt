@@ -2,6 +2,9 @@ package com.jerry.wuwen.logic.network
 
 import android.util.Log
 import com.jerry.wuwen.logic.model.LoginRequest
+import com.jerry.wuwen.logic.model.RegisterCodeRequest
+import com.jerry.wuwen.logic.model.RegisterRequest
+import com.jerry.wuwen.logic.network.WuWen2Network.await
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -13,9 +16,19 @@ import kotlin.coroutines.suspendCoroutine
 object WuWen2Network {
 
 
-
+    //登录
     private val loginService=ServiceCreator.create(LoginService::class.java)
     suspend fun askLogin(loginRequest: LoginRequest)= loginService.askLogin(loginRequest).await()
+
+
+    //注册发送验证码
+    private val registercodeService=ServiceCreator.create(RegisterCodeService::class.java)
+    suspend fun registercode(registerCodeRequest: RegisterCodeRequest)= registercodeService.registerCode(registerCodeRequest).await()
+
+    //注册
+    private val registerService=ServiceCreator.create(RegisterService::class.java)
+    suspend fun register(registerRequest: RegisterRequest)= registerService.register(registerRequest).await()
+
 
 
     private suspend fun <T> Call<T>.await():T{
