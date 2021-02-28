@@ -4,6 +4,7 @@ import android.util.Log
 import com.jerry.wuwen.logic.model.LoginRequest
 import com.jerry.wuwen.logic.model.RegisterCodeRequest
 import com.jerry.wuwen.logic.model.RegisterRequest
+import com.jerry.wuwen.logic.model.VideoRequest
 import com.jerry.wuwen.logic.network.WuWen2Network.await
 import retrofit2.Call
 import retrofit2.Callback
@@ -29,6 +30,9 @@ object WuWen2Network {
     private val registerService=ServiceCreator.create(RegisterService::class.java)
     suspend fun register(registerRequest: RegisterRequest)= registerService.register(registerRequest).await()
 
+    //Bilinili获取数据
+    private val videoService=BilibiliServiceCreator.create(VideoServise::class.java)
+    suspend fun video( search_type:String, keyword:String, order:String, page:Int)= videoService.askVideo( search_type,keyword,order,page).await()
 
 
     private suspend fun <T> Call<T>.await():T{

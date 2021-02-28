@@ -40,6 +40,7 @@ object Repository {
         }
         emit(result)
     }
+    //注册
     fun register(registerRequest: RegisterRequest)= liveData(Dispatchers.IO) {
         val result=try {
             val registerResponse=WuWen2Network.register(registerRequest)
@@ -54,6 +55,20 @@ object Repository {
         }
         emit(result)
     }
-
+    //bilibili获取
+    fun askVideo(search_type:String, keyword:String, order:String, page:Int)= liveData(Dispatchers.IO) {
+        val result=try {
+            val videoResponse=WuWen2Network.video(search_type, keyword, order, page)
+            Log.d("测试网络",videoResponse.toString())
+            if(videoResponse.code==0){
+                Result.success(videoResponse)
+            }else{
+                Result.failure(RuntimeException("请求失败"))
+            }
+        }catch (e:Exception){
+            Result.failure<VideoResponse>(e)
+        }
+        emit(result)
+    }
 
 }

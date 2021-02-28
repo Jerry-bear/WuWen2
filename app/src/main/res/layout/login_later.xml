@@ -142,6 +142,7 @@
 
 
                 <com.jerry.wuwen.resource.LineEditText
+
                     android:id="@+id/login_iptpsw_edt"
                     style="?android:attr/textViewStyle"
                     android:layout_width="246dp"
@@ -149,6 +150,7 @@
                     android:layout_marginTop="32dp"
                     android:background="@null"
                     android:hint="@string/login_username"
+                    android:inputType="textPassword"
                     android:maxLines="1"
                     android:textColor="@null"
                     android:textCursorDrawable="@drawable/my_cursor"

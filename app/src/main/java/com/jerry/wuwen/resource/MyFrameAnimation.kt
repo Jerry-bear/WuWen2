@@ -1,8 +1,8 @@
 package com.jerry.wuwen.resource
 
 import android.graphics.drawable.AnimationDrawable
+import android.os.Bundle
 import android.os.Handler
-
 
 
 /**

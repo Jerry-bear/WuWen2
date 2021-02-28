@@ -3,6 +3,8 @@ package com.jerry.wuwen
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
+import com.jerry.wuwen.logic.model.VideoRequest
+import com.jerry.wuwen.logic.model.VideoResponse
 
 class WuWen2Application :Application() {
     companion object{
@@ -13,6 +15,7 @@ class WuWen2Application :Application() {
         lateinit var NAME:String//用户名
         lateinit var TELE:String//电话
         var ifactionmovie=true
+        lateinit var videoResponse:VideoResponse//访问网络的response对象
     }
 
     override fun onCreate() {

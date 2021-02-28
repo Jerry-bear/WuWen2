@@ -12,7 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.register.RegisterActivity"></activity>
+        <activity android:name=".ui.video.VideoWebActivity"></activity>
+        <activity android:name=".ui.video.VideoActivity">
+
+        </activity>
+        <activity android:name=".ui.register.RegisterActivity" />
         <activity android:name=".ui.gesture.GestureActivity" />
         <activity android:name=".ui.maininterface.MaininterfaceActivity" />
         <activity android:name=".ui.login.MainActivity">

@@ -26,6 +26,7 @@ import kotlinx.android.synthetic.main.activity_gesture.*
 import kotlinx.android.synthetic.main.activity_maininterface.*
 import kotlinx.coroutines.NonCancellable.start
 import kotlin.concurrent.thread
+import com.jerry.wuwen.ui.video.VideoActivity
 
 
 class MaininterfaceActivity : AppCompatActivity(),OnBannerListener {
@@ -88,6 +89,13 @@ class MaininterfaceActivity : AppCompatActivity(),OnBannerListener {
         //设置点击手势识别图标动作
         mainface_gusture_cardview.setOnClickListener {
             val intent=Intent(this,GestureActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        //设置小视频点击事件
+        mainface_video_cardview.setOnClickListener {
+            val intent=Intent(this,VideoActivity::class.java)
             startActivity(intent)
             finish()
         }
