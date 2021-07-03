@@ -2,4 +2,4 @@ package com.jerry.wuwen.logic.model
 
 import com.google.gson.annotations.SerializedName
 
-data class RegisterResponse(val username:String,val name:String,@SerializedName("error_msg") val msg:String)
+data class RegisterResponse(val code:Int,val data:String,val msg:String)

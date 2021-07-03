@@ -17,10 +17,21 @@ import com.jerry.wuwen.logic.model.RegisterCodeRequest
 import com.jerry.wuwen.logic.model.RegisterRequest
 import com.jerry.wuwen.ui.login.MainActivity
 import kotlinx.android.synthetic.main.activity_register.*
+import okhttp3.MediaType
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody
+import org.json.JSONArray
+import org.json.JSONException
+import org.json.JSONObject
 import kotlin.concurrent.thread
+import kotlin.properties.Delegates
 
 
 class RegisterActivity : AppCompatActivity() {
+    var code by Delegates.notNull<Int>()
+    lateinit var data: String
+    lateinit var msgresponse: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //使状态栏和背景融合
@@ -44,6 +55,7 @@ class RegisterActivity : AppCompatActivity() {
         //获取viewmodel实例
         val viewModel by lazy { ViewModelProvider(this).get(RegisterViewModel::class.java) }
 
+
         //线程开启返回的消息执行
         val handler=object : Handler(Looper.getMainLooper()){
             override fun handleMessage(msg: Message) {
@@ -65,6 +77,21 @@ class RegisterActivity : AppCompatActivity() {
                             register_code_text.setText("重新获取验证码")
                         }
 
+                    }
+                    2->{
+                        if (code==0) {
+                            val intent=Intent(this@RegisterActivity, MainActivity::class.java)
+                            intent.putExtra("username",register_code_edt.text.toString())
+                            intent.putExtra("password",register_psw_edt.text.toString())
+                            startActivity(intent)
+                            finish()
+                        }else{
+                            //错误的话就返回后端传回来的错误信息
+                            register_psw_edt.isEnabled=true
+                            register_code_edt.isEnabled=true
+                            register_register_btn.isEnabled=true
+                            Toast.makeText(this@RegisterActivity,msgresponse,Toast.LENGTH_SHORT).show()
+                        }
                     }
                 }
             }
@@ -132,11 +159,71 @@ class RegisterActivity : AppCompatActivity() {
             val code_content=register_code_edt.text.toString()
             if (username_content.isNotEmpty()&&password_content.isNotEmpty()&&code_content.isNotEmpty()){
                 register_load_pgb.visibility=View.VISIBLE
-                val registerRequest= RegisterRequest(username_content,password_content,code_content)
+                val registerRequest= RegisterRequest(code_content,password_content,username_content)
                 register_psw_edt.isEnabled=false
                 register_code_edt.isEnabled=false
                 register_register_btn.isEnabled=false
-                viewModel.register(registerRequest)
+                //retrofit验证码解析
+                //viewModel.register(registerRequest)
+
+
+
+                //发送okhttp
+                thread {
+                    //拼接发送json数据
+                    val obj = JSONObject()
+                    try {
+
+                        Log.d("sssssssssssssssssssss：","发送请求")
+                        obj.put("username",register_code_edt.text.toString() )
+                        obj.put("password",register_psw_edt.text.toString() )
+                        obj.put("tele",register_usn_edt.text.toString() )
+                    } catch (e: JSONException) {
+                        e.printStackTrace()
+                        Log.d("sssssssssssssssssssss：","失败请求")
+                    }
+                    val type: MediaType? = MediaType.parse("application/json;charset=utf-8")
+                    val RequestBody2: RequestBody = RequestBody.create(type, "" + obj.toString())
+                        try {
+                            val client= OkHttpClient()
+                            val request = Request.Builder()
+                                .url("http://121.43.149.80:8090/api/register")
+                                .post(RequestBody2)
+                                .build()
+                            val response=client.newCall(request).execute()
+                            var responseData = response.body()?.string()
+                            if (responseData!=null){
+                                responseData="["+responseData+"]"
+                                val jsonData=responseData
+                                try {
+                                    val jsonArray = JSONArray(jsonData)
+                                    for (i in 0 until jsonArray.length()){
+                                        val jsonObject=jsonArray.getJSONObject(i)
+                                        code = jsonObject.getInt("code")
+                                        data = jsonObject.getString("data")
+                                        msgresponse = jsonObject.getString("msg")
+                                        val threadmsg=Message()
+                                        threadmsg.what=2
+                                        handler.sendMessage(threadmsg)
+                                    }
+                                }catch (e: java.lang.Exception){
+                                    e.printStackTrace()
+                                }
+                                Log.d("responseData收到的数据",responseData!!)
+                                val msg2=Message()
+                                msg2.what=1
+                                handler.sendMessage(msg2)
+                            }
+                        }catch (e: java.lang.Exception){
+                            e.printStackTrace()
+                        }
+                }
+
+
+
+
+
+
             }else {
                 if(password_content.isEmpty()){
                     Toast.makeText(this,"未输入密码", Toast.LENGTH_SHORT).show()
@@ -151,7 +238,7 @@ class RegisterActivity : AppCompatActivity() {
             if(response!=null){
                 if (response.msg=="注册成功") {
                     val intent=Intent(this, MainActivity::class.java)
-                    intent.putExtra("username",register_usn_edt.text.toString())
+                    intent.putExtra("username",register_code_edt.text.toString())
                     intent.putExtra("password",register_psw_edt.text.toString())
                     startActivity(intent)
                     finish()

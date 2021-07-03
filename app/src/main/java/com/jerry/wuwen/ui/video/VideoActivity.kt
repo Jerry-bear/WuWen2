@@ -62,8 +62,8 @@ class VideoActivity : AppCompatActivity() {
 
         }
         tabFragmentList.add(VideoFragment.newInstance())
-        tabFragmentList.add(VideoFragment1.newInstance())
-        tabFragmentList.add(VideoFragment2.newInstance())
+        tabFragmentList.add(VideoFragment.newInstance())
+        tabFragmentList.add(VideoFragment.newInstance())
         //tabFragmentList.add(VideoFragment.newInstance())
 
         viewPager.adapter = object : FragmentPagerAdapter(
@@ -93,17 +93,17 @@ class VideoActivity : AppCompatActivity() {
 
                 val bundle = Bundle()
                 bundle.putString("requestbody",tab.text.toString())
-                Toast.makeText(this@VideoActivity, "选中的" + tab.text, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@VideoActivity, "选中的" + tab.text, Toast.LENGTH_SHORT).show()
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {
                 /*val requestbody= VideoRequest("video","主页","totalrank",1)
                 viewModel.askVideo(requestbody)*/
-                Toast.makeText(this@VideoActivity, "未选中的" + tab.text, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@VideoActivity, "未选中的" + tab.text, Toast.LENGTH_SHORT).show()
             }
 
             override fun onTabReselected(tab: TabLayout.Tab) {
-                Toast.makeText(this@VideoActivity, "复选的" + tab.text, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@VideoActivity, "复选的" + tab.text, Toast.LENGTH_SHORT).show()
             }
         })
 

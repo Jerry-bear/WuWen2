@@ -35,7 +35,7 @@
                 android:id="@+id/constraintLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="90dp"
+                android:layout_marginTop="88dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,143 +63,114 @@
                     android:id="@+id/materialCardView7"
                     android:layout_width="320dp"
 
-                    android:layout_height="220dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
+                    android:visibility="gone"
                     app:cardCornerRadius="7dp"
-                    app:layout_constraintEnd_toEndOf="@+id/mainface_video_cardview"
+                    app:layout_constraintEnd_toEndOf="@+id/mainface_search_imgview"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/materialCardView5"
-                    app:layout_constraintTop_toBottomOf="@+id/materialCardView5">
+                    app:layout_constraintStart_toStartOf="@+id/mainface_teach_cardview"
+                    app:layout_constraintTop_toBottomOf="@+id/mainface_reverse_cardview">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/textView17"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="着装"
-                            android:textColor="#000000"
-                            android:textSize="12dp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView8"
-                            app:layout_constraintStart_toStartOf="@+id/imageView8"
-                            app:layout_constraintTop_toTopOf="@+id/textView16" />
-
-                        <TextView
                             android:id="@+id/textView16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="出行"
+                            android:text="新闻"
                             android:textColor="#000000"
                             android:textSize="12dp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView7"
-                            app:layout_constraintStart_toStartOf="@+id/imageView7"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="@+id/mainface_news_imgview"
+                            app:layout_constraintStart_toStartOf="@+id/mainface_news_imgview"
+                            app:layout_constraintTop_toBottomOf="@+id/mainface_news_imgview" />
 
                         <TextView
                             android:id="@+id/textView15"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:text="AI"
                             android:textColor="#000000"
                             android:textSize="12dp"
+                            android:visibility="gone"
                             app:layout_constraintEnd_toEndOf="@+id/imageView5"
                             app:layout_constraintStart_toStartOf="@+id/imageView5"
-                            app:layout_constraintTop_toTopOf="@+id/textView14" />
-
-                        <TextView
-                            android:id="@+id/textView14"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="游戏"
-                            android:textColor="#000000"
-                            android:textSize="12dp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView6"
-                            app:layout_constraintStart_toStartOf="@+id/imageView6"
-                            app:layout_constraintTop_toTopOf="@+id/textView13" />
+                            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
                         <TextView
                             android:id="@+id/textView13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="视力"
+                            android:text="语音转换"
                             android:textColor="#000000"
                             android:textSize="12dp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView4"
-                            app:layout_constraintStart_toStartOf="@+id/imageView4"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="@+id/mainface_conversion_imgview"
+                            app:layout_constraintStart_toStartOf="@+id/mainface_conversion_imgview"
                             app:layout_constraintTop_toTopOf="@+id/textView12" />
 
                         <ImageView
-                            android:id="@+id/imageView4"
+                            android:id="@+id/mainface_conversion_imgview"
                             android:layout_width="55dp"
                             android:layout_height="55dp"
+                            android:visibility="gone"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.357"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/imageView3"
-                            app:srcCompat="@drawable/glasses_log" />
+                            app:layout_constraintTop_toTopOf="@+id/mainface_video_cardview"
+                            app:srcCompat="@drawable/yuyin_log2" />
 
                         <ImageView
-                            android:id="@+id/imageView6"
+                            android:id="@+id/mainface_news_imgview"
                             android:layout_width="55dp"
                             android:layout_height="55dp"
+                            android:visibility="gone"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.65"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/imageView4"
-                            app:srcCompat="@drawable/mouse_log" />
-
-                        <ImageView
-                            android:id="@+id/imageView7"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:layout_marginBottom="52dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="@+id/imageView3"
-                            app:srcCompat="@drawable/mao2_log" />
-
-                        <ImageView
-                            android:id="@+id/imageView8"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView4"
-                            app:srcCompat="@drawable/tap_log" />
+                            app:layout_constraintTop_toTopOf="@+id/mainface_conversion_imgview"
+                            app:srcCompat="@drawable/news_logo" />
 
                         <ImageView
                             android:id="@+id/imageView5"
                             android:layout_width="55dp"
                             android:layout_height="55dp"
+                            android:visibility="gone"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.95"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/imageView6"
-                            app:srcCompat="@drawable/pingban_log" />
+                            app:layout_constraintTop_toTopOf="@+id/mainface_news_imgview"
+                            app:srcCompat="@drawable/ai_log" />
 
                         <ImageView
-                            android:id="@+id/imageView3"
+                            android:id="@+id/mainface_video_cardview"
                             android:layout_width="55dp"
                             android:layout_height="55dp"
-                            android:layout_marginTop="28dp"
+                            android:layout_marginTop="16dp"
+                            android:visibility="gone"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.058"
+                            app:layout_constraintHorizontal_bias="0.06"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/clock_log" />
+                            app:srcCompat="@drawable/video_logo" />
 
                         <TextView
                             android:id="@+id/textView12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="时钟"
+                            android:text="小视频"
                             android:textColor="#000000"
                             android:textSize="12dp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView3"
-                            app:layout_constraintStart_toStartOf="@+id/imageView3"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="@+id/mainface_video_cardview"
+                            app:layout_constraintStart_toStartOf="@+id/mainface_video_cardview"
+                            app:layout_constraintTop_toBottomOf="@+id/mainface_video_cardview" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </com.google.android.material.card.MaterialCardView>
@@ -260,7 +231,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/materialCardView4"
+                    android:id="@+id/mainface_camera_cardview"
                     android:layout_width="150dp"
 
                     android:layout_height="180dp"
@@ -279,7 +250,7 @@
                             android:layout_width="137dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="纵观世界，走出自我"
+                            android:text="通过发送一张图片实现单帧的手语识别"
                             android:textSize="12dp"
                             app:layout_constraintEnd_toEndOf="@+id/textView11"
                             app:layout_constraintStart_toStartOf="@+id/textView11"
@@ -292,7 +263,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:gravity="center"
-                            android:text="新闻"
+                            android:text="单帧识别"
                             android:textColor="#000000"
                             android:textSize="25dp"
                             app:layout_constraintEnd_toEndOf="@+id/imageView10"
@@ -302,23 +273,96 @@
 
                         <ImageView
                             android:id="@+id/imageView10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="69dp"
+                            android:layout_height="67dp"
                             android:layout_marginTop="16dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.506"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/news2" />
+                            app:srcCompat="@drawable/shoushi" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/materialCardView5"
+                    android:id="@+id/mainface_reverse_cardview"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="22dp"
+                    app:cardBackgroundColor="#FFF7AC"
+                    app:cardCornerRadius="7dp"
+                    app:layout_constraintEnd_toEndOf="@+id/mainface_teach_cardview"
+                    app:layout_constraintStart_toStartOf="@+id/mainface_teach_cardview"
+                    app:layout_constraintTop_toBottomOf="@+id/mainface_teach_cardview">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="146dp"
+                            android:layout_height="35dp"
+                            android:gravity="center"
+                            android:text="提供反向交流机制，听障人士“听懂”我们的话"
+                            android:textSize="12dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                        <TextView
+
+                            android:id="@+id/textView14"
+                            android:layout_width="106dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="语音转换"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                            app:layout_constraintStart_toStartOf="@+id/imageView8"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="51dp"
+                            android:layout_height="60dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                            app:layout_constraintStart_toEndOf="@+id/imageView6"
+                            app:layout_constraintTop_toTopOf="@+id/imageView6"
+                            app:layout_constraintVertical_bias="0.785"
+                            app:srcCompat="@drawable/shoushi2" />
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="15dp"
+                            android:layout_height="26dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+                            app:layout_constraintStart_toEndOf="@+id/imageView8"
+                            app:layout_constraintTop_toTopOf="@+id/imageView8"
+                            app:layout_constraintVertical_bias="0.523"
+                            app:srcCompat="@drawable/jiantou" />
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="53dp"
+                            android:layout_height="69dp"
+                            android:layout_marginStart="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.144"
+                            app:srcCompat="@drawable/talk" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mainface_teach_cardview"
                     android:layout_width="150dp"
 
                     android:layout_height="78dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="22dp"
                     android:backgroundTint="#C4F2FF"
                     app:cardCornerRadius="7dp"
                     app:layout_constraintStart_toStartOf="@+id/mainface_gusture_cardview"
@@ -366,15 +410,15 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/mainface_video_cardview"
+                    android:id="@+id/mainface_search_imgview"
                     android:layout_width="150dp"
 
                     android:layout_height="78dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="22dp"
                     android:backgroundTint="#CDFFEE"
                     app:cardCornerRadius="7dp"
-                    app:layout_constraintEnd_toEndOf="@+id/materialCardView4"
-                    app:layout_constraintTop_toBottomOf="@+id/materialCardView4">
+                    app:layout_constraintEnd_toEndOf="@+id/mainface_camera_cardview"
+                    app:layout_constraintTop_toBottomOf="@+id/mainface_camera_cardview">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="150dp"
@@ -382,18 +426,21 @@
 
                         <ImageView
                             android:id="@+id/imageView12"
-                            android:layout_width="37dp"
-                            android:layout_height="59dp"
+                            android:layout_width="41dp"
+                            android:layout_height="56dp"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.017"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/video_log" />
+                            app:layout_constraintVertical_bias="0.526"
+                            app:srcCompat="@drawable/search3" />
 
                         <TextView
                             android:id="@+id/textView18"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="小视频"
+                            android:text="手语查询"
                             android:textColor="#000000"
                             android:textSize="22dp"
                             app:layout_constraintBottom_toBottomOf="@+id/imageView12"
@@ -407,7 +454,7 @@
                             android:layout_width="89dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="来看看精彩的视频吧"
+                            android:text="来查询你想要学习的词汇吧"
                             android:textSize="12dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/imageView12"
@@ -430,6 +477,74 @@
                     app:layout_constraintEnd_toEndOf="@+id/materialCardView7"
                     app:layout_constraintStart_toStartOf="@+id/materialCardView7"
                     app:layout_constraintTop_toBottomOf="@+id/materialCardView7" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    app:layout_constraintEnd_toEndOf="@+id/mainface_search_imgview"
+                    app:layout_constraintStart_toStartOf="@+id/mainface_search_imgview"
+                    app:layout_constraintTop_toTopOf="@+id/mainface_reverse_cardview">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mainface_talk_imgview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="#ECE1FF"
+                        app:cardCornerRadius="7dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView23"
+                                android:layout_width="60dp"
+                                android:layout_height="50dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.123"
+                                app:srcCompat="@drawable/taliking" />
+
+                            <TextView
+
+                                android:id="@+id/textView22"
+                                android:layout_width="106dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:gravity="center"
+                                android:text="实时交流"
+                                android:textColor="#000000"
+                                android:textSize="25dp"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView23"
+                                app:layout_constraintStart_toStartOf="@+id/imageView23"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView23" />
+
+                            <TextView
+                                android:id="@+id/textView23"
+                                android:layout_width="146dp"
+                                android:layout_height="35dp"
+                                android:gravity="center"
+                                android:text="手语识别与反向识别可同时进行，实现实时交流"
+                                android:textSize="12dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/guideline7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintGuide_begin="20dp" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <ImageView

@@ -14,8 +14,9 @@ object Repository {
         val result=try {
             Log.d("仓库层","调用askLogin")
             val loginResponse=WuWen2Network.askLogin(loginRequest)
+            Log.d("kkkkkkkkkkkkkk", loginResponse.toString())
             Log.d("仓库层","调用askLogin成功")
-            if(loginResponse.erros!=null){
+            if(loginResponse!=null){
                 Result.success(loginResponse)
             }else{
                 Result.failure(RuntimeException("网络超时"))
@@ -26,6 +27,7 @@ object Repository {
         }
         emit(result)
     }
+
     //注册发送验证码
     fun register_code(registerCodeRequest: RegisterCodeRequest)= liveData(Dispatchers.IO) {
         val result=try {
@@ -52,6 +54,24 @@ object Repository {
             }
         }catch (e:Exception){
             Result.failure<RegisterResponse>(e)
+        }
+        emit(result)
+    }
+    //请求获取得到的手势识别的结果
+    fun askrecognition()= liveData(Dispatchers.IO) {
+        val result=try {
+            Log.d("仓库层","调用askrecognition")
+            val recognitionResponse=WuWen2Network.recognition()
+            Log.d("kkkkkkkkkkkkkk", recognitionResponse.toString())
+            //Log.d("仓库层","调用askLogin成功")
+            if(recognitionResponse!=null){
+                Result.success(recognitionResponse)
+            }else{
+                Result.failure(RuntimeException("网络超时"))
+            }
+        }catch (e:Exception){
+            Log.d("错误信息E：",e.toString())
+            Result.failure<RecognitionResponse>(e)
         }
         emit(result)
     }

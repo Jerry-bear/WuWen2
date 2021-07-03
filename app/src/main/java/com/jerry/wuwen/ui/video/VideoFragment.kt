@@ -114,7 +114,7 @@ class VideoFragment : Fragment(),OnBannerListener {
                         .start();
                     Log.d("banner的操作",":${list_path}")
 
-                    Toast.makeText(this.activity,response!!.message,Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this.activity,response!!.message,Toast.LENGTH_SHORT).show()
                 }else{
                     //错误的话就返回后端传回来的错误信息
                     Toast.makeText(this.activity,response!!.message,Toast.LENGTH_SHORT).show()

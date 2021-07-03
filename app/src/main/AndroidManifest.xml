@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jerry.wuwen">
-
-    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 连接网络权限，用于执行云端语音能力 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 读取网络信息状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取当前wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 读取手机信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 外存储写权限,构建语法需要用到此权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 外存储读权限,构建语法需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 摄相头权限,拍照需要用到 -->
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -12,10 +21,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.video.VideoWebActivity"></activity>
-        <activity android:name=".ui.video.VideoActivity">
+        <activity android:name=".ui.talk.TalkingActivity"></activity>
+        <activity android:name=".ui.news.NewActivity" />
+        <activity android:name=".ui.teach.Common" />
+        <activity android:name=".ui.teach.Out" />
+        <activity android:name=".ui.teach.Talk" />
+        <activity android:name=".ui.teach.Social" />
+        <activity android:name=".ui.teach.Ai" />
+        <activity android:name=".ui.news.News" />
 
-        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.jerry.wuwen"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".ui.reverse.ReverseActivity" />
+        <activity android:name=".ui.search.SearchActivity" />
+        <activity android:name=".ui.teach.TeachActivity" />
+        <activity android:name=".ui.camera.CameraActivity" />
+        <activity android:name=".ui.video.VideoWebActivity" />
+        <activity android:name=".ui.video.VideoActivity" />
         <activity android:name=".ui.register.RegisterActivity" />
         <activity android:name=".ui.gesture.GestureActivity" />
         <activity android:name=".ui.maininterface.MaininterfaceActivity" />

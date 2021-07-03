@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_btn_shapenor"
+    tools:context=".ui.reverse.ReverseActivity" >
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="141dp"
+        android:layout_height="64dp"
+        android:gravity="center"
+        android:text="点击翻译"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/reverse_action_button"
+        app:layout_constraintStart_toStartOf="@+id/reverse_action_button"
+        app:layout_constraintTop_toBottomOf="@+id/reverse_action_button" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/reverse_video_layout"
+        android:layout_width="311dp"
+        android:layout_height="216dp"
+        android:background="#00FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/reverse_action_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <VideoView
+            android:id="@+id/reverse_video_videoview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </VideoView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/reverse_action_button"
+        android:layout_width="61dp"
+        android:layout_height="67dp"
+        android:background="@drawable/mkf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.723" />
+
+    <TextView
+
+        android:id="@+id/reverse_msghead_text"
+        android:layout_width="271dp"
+        android:layout_height="107dp"
+        android:gravity="center"
+        android:text="开始说话翻译手语"
+        android:textColor="#EAE4E4"
+        android:textColorLink="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/reverse_action_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/reverse_video_layout"
+        app:layout_constraintStart_toStartOf="@+id/reverse_video_layout"
+        app:layout_constraintTop_toBottomOf="@+id/reverse_video_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

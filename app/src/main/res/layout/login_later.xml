@@ -7,6 +7,51 @@
     android:background="@drawable/login_bg">
     <!-- android:visibility="gone"-->
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_codeface_layout"
+        android:layout_width="314dp"
+        android:layout_height="210dp"
+        android:background="#FFFFFF"
+        android:translationZ="30dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38">
+
+        <Button
+            android:id="@+id/login_codeok_button"
+            android:layout_width="86dp"
+            android:layout_height="40dp"
+            android:background="@drawable/login_btn_shape0"
+            android:text="确定"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/login_code_edit"
+            app:layout_constraintEnd_toEndOf="@+id/login_code_img"
+            app:layout_constraintTop_toTopOf="@+id/login_code_edit" />
+
+        <EditText
+            android:id="@+id/login_code_edit"
+            android:layout_width="148dp"
+            android:layout_height="42dp"
+            android:hint="请输入验证码"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/login_code_img"
+            app:layout_constraintTop_toBottomOf="@+id/login_code_img" />
+
+        <ImageView
+            android:id="@+id/login_code_img"
+            android:layout_width="263dp"
+            android:layout_height="75dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.16000003" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <Button
         android:id="@+id/button2"
         android:layout_width="40dp"
@@ -277,10 +322,10 @@
     <ProgressBar
         android:id="@+id/login_load_pgb"
         style="@style/ProgressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:indeterminateDuration="300"
-        android:translationZ="22dp"
+        android:translationZ="55dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

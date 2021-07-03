@@ -34,6 +34,10 @@ object WuWen2Network {
     private val videoService=BilibiliServiceCreator.create(VideoServise::class.java)
     suspend fun video( search_type:String, keyword:String, order:String, page:Int)= videoService.askVideo( search_type,keyword,order,page).await()
 
+    //获取识别结果
+    private val recognitionService=RecognitionServiceCreator.create(RecognitionService::class.java)
+    suspend fun recognition()= recognitionService.recognition().await()
+
 
     private suspend fun <T> Call<T>.await():T{
         //Log.d("执行挂起函数","挂起")
